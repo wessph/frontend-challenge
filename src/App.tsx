@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AppContent = styled.div`
     min-height: 100vh;
-    background-color: #2c3338;
+    background-image: linear-gradient(to right bottom, #ac92ec, #a78ce8, #a186e4, #9c80e0, #967adc);
   `
 
 function App() {

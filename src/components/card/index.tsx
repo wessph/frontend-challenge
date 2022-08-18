@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Card, Header, Body, HeaderText, Image } from "./styles";
 
 type Character = {
@@ -10,9 +12,15 @@ type Character = {
   like?: boolean;
 }
 
-export default function CardComponent({ character }: Character | undefined): JSX.Element {
+export default function CardComponent({ character }: Character[] | undefined): JSX.Element {
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate(`/${character?.id}`);
+  }
+
   return (
-    <Card>
+    <Card onClick={handleClick}>
       <Header>
         <HeaderText>{ character.name }</HeaderText>
       </Header>
